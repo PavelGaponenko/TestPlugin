@@ -8,5 +8,8 @@
     },
     "require": {
         "composer-plugin-api": "*"
+    },
+    "extra": {
+        "class": "Pavelgaponenko\\TestPlugin\\Plugin"
     }
 }
