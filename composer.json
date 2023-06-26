@@ -1,0 +1,10 @@
+{
+    "name": "pavelgaponenko/test-plugin",
+    "type": "composer-plugin",
+    "autoload": {
+        "psr-4": {
+            "Pavelgaponenko\\TestPlugin\\": "src/"
+        }
+    },
+    "require": {}
+}
