@@ -7,7 +7,8 @@
         }
     },
     "require": {
-        "composer-plugin-api": "*"
+        "composer-plugin-api": "*",
+        "composer/composer": "^2.5"
     },
     "extra": {
         "class": "Pavelgaponenko\\TestPlugin\\Plugin"

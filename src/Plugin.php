@@ -12,4 +12,14 @@ class Plugin implements PluginInterface
     {
         print "hello world";
     }
+
+    public function deactivate(Composer $composer, IOInterface $io)
+    {
+        // TODO: Implement deactivate() method.
+    }
+
+    public function uninstall(Composer $composer, IOInterface $io)
+    {
+        // TODO: Implement uninstall() method.
+    }
 }
