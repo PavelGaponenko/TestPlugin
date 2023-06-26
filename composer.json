@@ -6,5 +6,7 @@
             "Pavelgaponenko\\TestPlugin\\": "src/"
         }
     },
-    "require": {}
+    "require": {
+        "composer-plugin-api": "*"
+    }
 }
