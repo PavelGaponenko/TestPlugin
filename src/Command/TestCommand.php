@@ -3,14 +3,19 @@
 namespace Pavelgaponenko\TestPlugin\Command;
 
 use Composer\Command\BaseCommand;
-use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class TestCommand extends Command
+class TestCommand extends BaseCommand
 {
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function configure(): void
+    {
+        $this->setName('custom-plugin-command');
+    }
+
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $output->writeln('Executing');
+        return 0;
     }
 }

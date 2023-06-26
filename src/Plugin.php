@@ -5,10 +5,10 @@ namespace Pavelgaponenko\TestPlugin;
 use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Plugin\Capability\CommandProvider;
+use Composer\Plugin\Capable;
 use Composer\Plugin\PluginInterface;
-use Pavelgaponenko\TestPlugin\Command\TestCommand;
 
-class Plugin implements PluginInterface, CommandProvider
+class Plugin implements PluginInterface, Capable
 {
     public function activate(Composer $composer, IOInterface $io)
     {
@@ -25,10 +25,10 @@ class Plugin implements PluginInterface, CommandProvider
         // TODO: Implement uninstall() method.
     }
 
-    public function getCommands()
+    public function getCapabilities()
     {
-        return [
-            'plugin-test-command' => TestCommand::class,
-        ];
+        return array(
+            CommandProvider::class => TestCommandProvider::class,
+        );
     }
 }
