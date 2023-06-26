@@ -10,7 +10,7 @@ class Plugin implements PluginInterface
 {
     public function activate(Composer $composer, IOInterface $io)
     {
-        print "hello world";
+        echo "hello world";
     }
 
     public function deactivate(Composer $composer, IOInterface $io)
